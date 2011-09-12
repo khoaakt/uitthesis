@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tree>
+	<provider name="VnExpress">
+		<catagory name="Thể thao">http://vnexpress.net/gl/the-thao</catagory>
+		<catagory name="Giáo dục">http://vnexpress.net/gl/giao-duc</catagory>
+	</provider>
+</tree>
