@@ -17,6 +17,7 @@ namespace KLTN.Model
         private Uri _uri;            // liên kết nguyên bản của bài báo
         private DateTime _time;      // thời gian bài báo được đăng
         private String _author;
+        private String _path;
 
         public Article()
         {
@@ -69,6 +70,12 @@ namespace KLTN.Model
         {
             get { return _author; }
             set { _author = value; }
+        }
+
+        public string Path
+        {
+            get { return _path; }
+            set { _path = value; }
         }
 
         public string[] toArray()

@@ -29,22 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Văn hóa");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Thể thao");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("VnExpress", new System.Windows.Forms.TreeNode[] {
-            treeNode19,
-            treeNode20});
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Quốc tế");
-            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("Âm nhạc");
-            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("Giải trí");
-            System.Windows.Forms.TreeNode treeNode25 = new System.Windows.Forms.TreeNode("Dân Trí", new System.Windows.Forms.TreeNode[] {
-            treeNode22,
-            treeNode23,
-            treeNode24});
-            System.Windows.Forms.TreeNode treeNode26 = new System.Windows.Forms.TreeNode("Vietnamnet");
-            System.Windows.Forms.TreeNode treeNode27 = new System.Windows.Forms.TreeNode("Tuổi trẻ");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Văn hóa");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Thể thao");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("VnExpress", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Quốc tế");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Âm nhạc");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Giải trí");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Dân Trí", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode5,
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Vietnamnet");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Tuổi trẻ");
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.treeView = new System.Windows.Forms.TreeView();
+            this.listView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateCatagoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,16 +66,18 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.helpProvider = new System.Windows.Forms.HelpProvider();
             this.catagoryUpdateBackgroundWorker = new System.ComponentModel.BackgroundWorker();
-            this.listView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.webBrowser = new System.Windows.Forms.WebBrowser();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer
@@ -87,7 +93,7 @@
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.splitContainer.Panel2.Controls.Add(this.listView);
+            this.splitContainer.Panel2.Controls.Add(this.splitContainer1);
             this.splitContainer.Size = new System.Drawing.Size(634, 482);
             this.splitContainer.SplitterDistance = 189;
             this.splitContainer.TabIndex = 0;
@@ -98,33 +104,68 @@
             this.treeView.FullRowSelect = true;
             this.treeView.Location = new System.Drawing.Point(0, 0);
             this.treeView.Name = "treeView";
-            treeNode19.Name = "Node4";
-            treeNode19.Text = "Văn hóa";
-            treeNode20.Name = "Node5";
-            treeNode20.Text = "Thể thao";
-            treeNode21.Name = "Node0";
-            treeNode21.Text = "VnExpress";
-            treeNode22.Name = "Node6";
-            treeNode22.Text = "Quốc tế";
-            treeNode23.Name = "Node7";
-            treeNode23.Text = "Âm nhạc";
-            treeNode24.Name = "Node8";
-            treeNode24.Text = "Giải trí";
-            treeNode25.Name = "Node1";
-            treeNode25.Text = "Dân Trí";
-            treeNode26.Name = "Node2";
-            treeNode26.Text = "Vietnamnet";
-            treeNode27.Name = "Node3";
-            treeNode27.Text = "Tuổi trẻ";
+            treeNode1.Name = "Node4";
+            treeNode1.Text = "Văn hóa";
+            treeNode2.Name = "Node5";
+            treeNode2.Text = "Thể thao";
+            treeNode3.Name = "Node0";
+            treeNode3.Text = "VnExpress";
+            treeNode4.Name = "Node6";
+            treeNode4.Text = "Quốc tế";
+            treeNode5.Name = "Node7";
+            treeNode5.Text = "Âm nhạc";
+            treeNode6.Name = "Node8";
+            treeNode6.Text = "Giải trí";
+            treeNode7.Name = "Node1";
+            treeNode7.Text = "Dân Trí";
+            treeNode8.Name = "Node2";
+            treeNode8.Text = "Vietnamnet";
+            treeNode9.Name = "Node3";
+            treeNode9.Text = "Tuổi trẻ";
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode21,
-            treeNode25,
-            treeNode26,
-            treeNode27});
+            treeNode3,
+            treeNode7,
+            treeNode8,
+            treeNode9});
             this.treeView.Size = new System.Drawing.Size(189, 482);
             this.treeView.TabIndex = 0;
             this.treeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseClick);
             this.treeView.Click += new System.EventHandler(this.treeView_Click);
+            // 
+            // listView
+            // 
+            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView.FullRowSelect = true;
+            this.listView.GridLines = true;
+            this.listView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView.Location = new System.Drawing.Point(0, 0);
+            this.listView.MultiSelect = false;
+            this.listView.Name = "listView";
+            this.listView.ShowItemToolTips = true;
+            this.listView.Size = new System.Drawing.Size(441, 241);
+            this.listView.TabIndex = 0;
+            this.listView.UseCompatibleStateImageBehavior = false;
+            this.listView.View = System.Windows.Forms.View.Details;
+            this.listView.ItemActivate += new System.EventHandler(this.listView_ItemActivate);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tên bài báo";
+            this.columnHeader1.Width = 259;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tác giả";
+            this.columnHeader2.Width = 90;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Thời gian đăng";
+            this.columnHeader3.Width = 186;
             // 
             // menuStrip
             // 
@@ -267,39 +308,32 @@
             this.catagoryUpdateBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.catagoryUpdateBackgroundWorker_DoWork);
             this.catagoryUpdateBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.catagoryUpdateBackgroundWorker_RunWorkerCompleted);
             // 
-            // listView
+            // splitContainer1
             // 
-            this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView.FullRowSelect = true;
-            this.listView.GridLines = true;
-            this.listView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView.Location = new System.Drawing.Point(0, 0);
-            this.listView.MultiSelect = false;
-            this.listView.Name = "listView";
-            this.listView.ShowItemToolTips = true;
-            this.listView.Size = new System.Drawing.Size(441, 482);
-            this.listView.TabIndex = 0;
-            this.listView.UseCompatibleStateImageBehavior = false;
-            this.listView.View = System.Windows.Forms.View.Details;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // columnHeader1
+            // splitContainer1.Panel1
             // 
-            this.columnHeader1.Text = "Tên bài báo";
-            this.columnHeader1.Width = 259;
+            this.splitContainer1.Panel1.Controls.Add(this.listView);
             // 
-            // columnHeader2
+            // splitContainer1.Panel2
             // 
-            this.columnHeader2.Text = "Tác giả";
-            this.columnHeader2.Width = 90;
+            this.splitContainer1.Panel2.Controls.Add(this.webBrowser);
+            this.splitContainer1.Size = new System.Drawing.Size(441, 482);
+            this.splitContainer1.SplitterDistance = 241;
+            this.splitContainer1.TabIndex = 1;
             // 
-            // columnHeader3
+            // webBrowser
             // 
-            this.columnHeader3.Text = "Thời gian đăng";
-            this.columnHeader3.Width = 186;
+            this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser.Name = "webBrowser";
+            this.webBrowser.Size = new System.Drawing.Size(441, 237);
+            this.webBrowser.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -320,6 +354,10 @@
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,5 +388,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.WebBrowser webBrowser;
     }
 }
