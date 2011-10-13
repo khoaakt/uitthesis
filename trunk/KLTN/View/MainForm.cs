@@ -102,18 +102,7 @@ namespace KLTN.View
                 CatagoryController controller = new CatagoryController();
                 controller.GetCatagory(selected.Parent.Text, selected.Text);
                 controller.GetAllArticles();
-                var list = controller.Articles;
-                
-                // clear list view
-                listView.Items.Clear();
-
-                for (int i = 0; i < list.Count; i++)
-                {
-                    listView.Items.Add(list[i].Title);
-                    listView.Items[listView.Items.Count - 1].SubItems.Add(list[i].Author);
-                    listView.Items[listView.Items.Count - 1].SubItems.Add(list[i].Time.ToString());
-                    listView.Items[listView.Items.Count - 1].ToolTipText = list[i].Summany;
-                }
+                this.treeView_Click(null, e);
             }
         }
 
@@ -135,9 +124,31 @@ namespace KLTN.View
             TreeNode selected = treeView.SelectedNode;
             // nếu danh mục đang chọn không phải là provider
             if (selected.Parent != null)
-            { 
-                // TODO
+            {
+                CatagoryController controller = new CatagoryController();
+                controller.GetCatagory(selected.Parent.Text, selected.Text);
+                var list = controller.LoadAllArticles();
+                // clear list view
+                listView.Items.Clear();
+
+                // refresh list view
+                for (int i = 0; i < list.Count; i++)
+                {
+                    listView.Items.Add(list[i].Title);
+                    listView.Items[listView.Items.Count - 1].SubItems.Add(list[i].Author);
+                    listView.Items[listView.Items.Count - 1].SubItems.Add(list[i].Time.ToString());
+                    listView.Items[listView.Items.Count - 1].ToolTipText = list[i].Summany;
+                    listView.Items[listView.Items.Count - 1].Tag = list[i];
+                }
             }
         }
+
+        private void listView_ItemActivate(object sender, EventArgs e)
+        {
+            Article article = (Article) listView.SelectedItems[0].Tag;
+            webBrowser.DocumentText = article.Content; 
+        }
+
+
     }
 }

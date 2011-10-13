@@ -69,8 +69,8 @@ namespace KLTN.Controller
             article.Time = DateTime.Parse(article_data[1]);
             article.Summany = article_data[2];
             article.Content = article_data[3];
-            article.Author = article_data[4];
-            article.Uri = new Uri(article_data[5]);
+            article.Uri = new Uri(article_data[4]);
+            article.Author = article_data[5];
             
 
             sr.Close(); // đóng luồng
@@ -106,20 +106,34 @@ namespace KLTN.Controller
             var content_node = document.QuerySelector(contentSelector);
             var author_node = document.QuerySelector(authorSelector);
 
+            // validate dữ liệu
+            
+            // code was here
+
+            //
+
             // gán dữ liệu vào đối tượng model
             Article.Uri = new System.Uri(url);
             Article.Title = title_node.InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
             Article.Summany = summany_node.InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
-            Article.Author = author_node.InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
+            if (author_node != null)
+                Article.Author = author_node.InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
+            else
+                Article.Author = "Khuyết danh";
             Article.Content = content_node.InnerHtml.Trim();
-            var time_string = time_node.InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
-            DateTime time;
-            if (!DateTime.TryParse(time_string, out time))
+            if (time_node != null)
             {
-                time = DateTime.Now;
-            }
+                var time_string = time_node.InnerText.Replace("\r", "").Replace("\n", "").Replace("\t", "").Trim();
+                DateTime time;
+                if (!DateTime.TryParse(time_string, out time))
+                {
+                    time = DateTime.Now;
+                }
 
-            Article.Time = time;
+                Article.Time = time;
+            }
+            else Article.Time = DateTime.Now;
+
 
             return Article;
         }

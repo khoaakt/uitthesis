@@ -84,7 +84,7 @@ namespace KLTN.Controller
                 string url = "";
                 if (nodes[i].Attributes["href"].Value.Contains(Catagory.Uri.Host))
                     url = nodes[i].Attributes["href"].Value;
-                else // uri là đường dẫn tương đối phải chuyển thành uri đầy đủ
+                else // uri là đường dẫn tương đối phải chuyển thành dạng đầy đủ
                     url = "http://" + Catagory.Uri.Host + nodes[i].Attributes["href"].Value;
                 urlList.Add(url);
             }
@@ -121,9 +121,41 @@ namespace KLTN.Controller
                 var file_name = sBuilder.ToString() + ".ht";
 
                 var file_path = Path.Combine(catagory_path, file_name);
+
                 // lưu xuống ổ cứng
                 ArticleController.Save(article, file_path);
             }
         }
+
+        // đọc tất cả dữ liệu bài báo đã lưu trong ổ cứng
+        public List<Article> LoadAllArticles()
+        {
+            // xây lại đường dẫn tới phân mục
+            var catagory_path = Path.Combine(DATA_DIR, Catagory.Provider.Name, Catagory.Name);
+            // lấy tất cả đường dẫn các tập tin dữ liệu bài báo (có đuôi .ht)
+            var articles = new List<Article>();
+
+            if (Directory.Exists(catagory_path))
+            {
+                // lấy tất cả đường dẫn đến tập tin dữ liệu
+                var file_paths = Directory.GetFiles(catagory_path, "*.ht");
+
+                // sắp xếp mảng đường dẫn theo thời gian ghi tập tin
+                var sorted_paths = from f in file_paths
+		                                orderby new FileInfo(f).LastWriteTime descending
+		                                select f;
+
+
+                foreach (string path in sorted_paths)
+                {
+                    var article = ArticleController.Read(path);
+                    articles.Add(article);
+                }
+            }
+            this.Articles = articles;
+            return articles;
+        }
+
+       
     }
 }
