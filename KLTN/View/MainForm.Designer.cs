@@ -29,26 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Văn hóa");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Thể thao");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("VnExpress", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Quốc tế");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Âm nhạc");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Giải trí");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Dân Trí", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5,
-            treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Vietnamnet");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Tuổi trẻ");
+            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Văn hóa");
+            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Thể thao");
+            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("VnExpress", new System.Windows.Forms.TreeNode[] {
+            treeNode28,
+            treeNode29});
+            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Quốc tế");
+            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Âm nhạc");
+            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Giải trí");
+            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Dân Trí", new System.Windows.Forms.TreeNode[] {
+            treeNode31,
+            treeNode32,
+            treeNode33});
+            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Vietnamnet");
+            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Tuổi trẻ");
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.treeView = new System.Windows.Forms.TreeView();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.listView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateCatagoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,19 +69,29 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.helpProvider = new System.Windows.Forms.HelpProvider();
             this.catagoryUpdateBackgroundWorker = new System.ComponentModel.BackgroundWorker();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.webBrowser = new System.Windows.Forms.WebBrowser();
+            this.button1 = new System.Windows.Forms.Button();
+            this.SpeechLb = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
-            this.menuStrip.SuspendLayout();
-            this.statusStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.menuStrip.SuspendLayout();
+            this.statusStrip.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Size = new System.Drawing.Size(150, 100);
+            this.splitContainer2.TabIndex = 0;
             // 
             // splitContainer
             // 
@@ -95,7 +108,7 @@
             this.splitContainer.Panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.splitContainer.Panel2.Controls.Add(this.splitContainer1);
             this.splitContainer.Size = new System.Drawing.Size(634, 482);
-            this.splitContainer.SplitterDistance = 189;
+            this.splitContainer.SplitterDistance = 147;
             this.splitContainer.TabIndex = 0;
             // 
             // treeView
@@ -104,33 +117,51 @@
             this.treeView.FullRowSelect = true;
             this.treeView.Location = new System.Drawing.Point(0, 0);
             this.treeView.Name = "treeView";
-            treeNode1.Name = "Node4";
-            treeNode1.Text = "Văn hóa";
-            treeNode2.Name = "Node5";
-            treeNode2.Text = "Thể thao";
-            treeNode3.Name = "Node0";
-            treeNode3.Text = "VnExpress";
-            treeNode4.Name = "Node6";
-            treeNode4.Text = "Quốc tế";
-            treeNode5.Name = "Node7";
-            treeNode5.Text = "Âm nhạc";
-            treeNode6.Name = "Node8";
-            treeNode6.Text = "Giải trí";
-            treeNode7.Name = "Node1";
-            treeNode7.Text = "Dân Trí";
-            treeNode8.Name = "Node2";
-            treeNode8.Text = "Vietnamnet";
-            treeNode9.Name = "Node3";
-            treeNode9.Text = "Tuổi trẻ";
+            treeNode28.Name = "Node4";
+            treeNode28.Text = "Văn hóa";
+            treeNode29.Name = "Node5";
+            treeNode29.Text = "Thể thao";
+            treeNode30.Name = "Node0";
+            treeNode30.Text = "VnExpress";
+            treeNode31.Name = "Node6";
+            treeNode31.Text = "Quốc tế";
+            treeNode32.Name = "Node7";
+            treeNode32.Text = "Âm nhạc";
+            treeNode33.Name = "Node8";
+            treeNode33.Text = "Giải trí";
+            treeNode34.Name = "Node1";
+            treeNode34.Text = "Dân Trí";
+            treeNode35.Name = "Node2";
+            treeNode35.Text = "Vietnamnet";
+            treeNode36.Name = "Node3";
+            treeNode36.Text = "Tuổi trẻ";
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode7,
-            treeNode8,
-            treeNode9});
-            this.treeView.Size = new System.Drawing.Size(189, 482);
+            treeNode30,
+            treeNode34,
+            treeNode35,
+            treeNode36});
+            this.treeView.Size = new System.Drawing.Size(147, 482);
             this.treeView.TabIndex = 0;
+            this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterSelect);
             this.treeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseClick);
-            this.treeView.Click += new System.EventHandler(this.treeView_Click);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.listView);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.webBrowser);
+            this.splitContainer1.Size = new System.Drawing.Size(483, 482);
+            this.splitContainer1.SplitterDistance = 241;
+            this.splitContainer1.TabIndex = 1;
             // 
             // listView
             // 
@@ -146,7 +177,7 @@
             this.listView.MultiSelect = false;
             this.listView.Name = "listView";
             this.listView.ShowItemToolTips = true;
-            this.listView.Size = new System.Drawing.Size(441, 241);
+            this.listView.Size = new System.Drawing.Size(483, 241);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -164,8 +195,17 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Thời gian đăng";
+            this.columnHeader3.Text = "Thời gian cập nhật";
             this.columnHeader3.Width = 186;
+            // 
+            // webBrowser
+            // 
+            this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser.Location = new System.Drawing.Point(0, 0);
+            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser.Name = "webBrowser";
+            this.webBrowser.Size = new System.Drawing.Size(483, 237);
+            this.webBrowser.TabIndex = 0;
             // 
             // menuStrip
             // 
@@ -308,56 +348,62 @@
             this.catagoryUpdateBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.catagoryUpdateBackgroundWorker_DoWork);
             this.catagoryUpdateBackgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.catagoryUpdateBackgroundWorker_RunWorkerCompleted);
             // 
-            // splitContainer1
+            // button1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(210, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Voice Control";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // splitContainer1.Panel1
+            // SpeechLb
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.listView);
+            this.SpeechLb.AutoSize = true;
+            this.SpeechLb.Location = new System.Drawing.Point(300, 6);
+            this.SpeechLb.Name = "SpeechLb";
+            this.SpeechLb.Size = new System.Drawing.Size(58, 13);
+            this.SpeechLb.TabIndex = 5;
+            this.SpeechLb.Text = "Hoạt động";
+            this.SpeechLb.Visible = false;
             // 
-            // splitContainer1.Panel2
+            // timer1
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.webBrowser);
-            this.splitContainer1.Size = new System.Drawing.Size(441, 482);
-            this.splitContainer1.SplitterDistance = 241;
-            this.splitContainer1.TabIndex = 1;
-            // 
-            // webBrowser
-            // 
-            this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(441, 237);
-            this.webBrowser.TabIndex = 0;
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 506);
+            this.Controls.Add(this.SpeechLb);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
             this.Text = "Tin tức tự động";
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.splitContainer.Panel1.ResumeLayout(false);
             this.splitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
+            this.statusStrip.ResumeLayout(false);
+            this.statusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,7 +412,6 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer;
-        private System.Windows.Forms.TreeView treeView;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
@@ -389,6 +434,11 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.TreeView treeView;
         private System.Windows.Forms.WebBrowser webBrowser;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label SpeechLb;
+        private System.Windows.Forms.Timer timer1;
     }
 }
