@@ -16,3 +16,21 @@ C:\Users\Hieu Tran\Documents\Visual Studio 2010\Projects\KLTN\KLTN\obj\x86\Debug
 C:\Users\Hieu Tran\Documents\Visual Studio 2010\Projects\KLTN\KLTN\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Hieu Tran\Documents\Visual Studio 2010\Projects\KLTN\KLTN\obj\x86\Debug\KLTN.exe
 C:\Users\Hieu Tran\Documents\Visual Studio 2010\Projects\KLTN\KLTN\obj\x86\Debug\KLTN.pdb
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\KLTN.exe
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\KLTN.pdb
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\bin\Debug\KLTN.exe
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\bin\Debug\KLTN.pdb
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\bin\Debug\Fizzler.dll
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\bin\Debug\Fizzler.Systems.HtmlAgilityPack.dll
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\bin\Debug\Fizzler.Systems.XmlNodeQuery.dll
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\bin\Debug\HtmlAgilityPack.dll
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\bin\Debug\nunit.framework.dll
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\bin\Debug\SgmlReaderDll.dll
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\KLTN.Properties.Resources.resources
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\KLTN.View.AboutBox.resources
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\KLTN.View.ContentView.resources
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\KLTN.View.MainForm.resources
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\KLTN.View.ProviderManager.resources
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\GenerateResource.read.1.tlog
+H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\GenerateResource.write.1.tlog
