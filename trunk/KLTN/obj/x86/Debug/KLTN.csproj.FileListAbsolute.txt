@@ -34,3 +34,5 @@ H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\KLTN.View.MainForm.r
 H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\KLTN.View.ProviderManager.resources
 H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\GenerateResource.read.1.tlog
 H:\ut\tailieuhoc\DHCNNT\Thesis\uitthesis\KLTN\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Hieu Tran\Documents\Visual Studio 2010\Projects\KLTN\KLTN\obj\x86\Debug\Interop.NHMTTSENGLib.dll
+C:\Users\Hieu Tran\Documents\Visual Studio 2010\Projects\KLTN\KLTN\obj\x86\Debug\KLTN.csproj.ResolveComReference.cache
