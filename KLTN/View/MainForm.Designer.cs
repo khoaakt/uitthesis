@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode28 = new System.Windows.Forms.TreeNode("Văn hóa");
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("Thể thao");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("VnExpress", new System.Windows.Forms.TreeNode[] {
-            treeNode28,
-            treeNode29});
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("Quốc tế");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Âm nhạc");
-            System.Windows.Forms.TreeNode treeNode33 = new System.Windows.Forms.TreeNode("Giải trí");
-            System.Windows.Forms.TreeNode treeNode34 = new System.Windows.Forms.TreeNode("Dân Trí", new System.Windows.Forms.TreeNode[] {
-            treeNode31,
-            treeNode32,
-            treeNode33});
-            System.Windows.Forms.TreeNode treeNode35 = new System.Windows.Forms.TreeNode("Vietnamnet");
-            System.Windows.Forms.TreeNode treeNode36 = new System.Windows.Forms.TreeNode("Tuổi trẻ");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Văn hóa");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Thể thao");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("VnExpress", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Quốc tế");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Âm nhạc");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Giải trí");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Dân Trí", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14,
+            treeNode15});
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Vietnamnet");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Tuổi trẻ");
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.treeView = new System.Windows.Forms.TreeView();
@@ -72,6 +72,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.SpeechLb = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
@@ -117,29 +118,29 @@
             this.treeView.FullRowSelect = true;
             this.treeView.Location = new System.Drawing.Point(0, 0);
             this.treeView.Name = "treeView";
-            treeNode28.Name = "Node4";
-            treeNode28.Text = "Văn hóa";
-            treeNode29.Name = "Node5";
-            treeNode29.Text = "Thể thao";
-            treeNode30.Name = "Node0";
-            treeNode30.Text = "VnExpress";
-            treeNode31.Name = "Node6";
-            treeNode31.Text = "Quốc tế";
-            treeNode32.Name = "Node7";
-            treeNode32.Text = "Âm nhạc";
-            treeNode33.Name = "Node8";
-            treeNode33.Text = "Giải trí";
-            treeNode34.Name = "Node1";
-            treeNode34.Text = "Dân Trí";
-            treeNode35.Name = "Node2";
-            treeNode35.Text = "Vietnamnet";
-            treeNode36.Name = "Node3";
-            treeNode36.Text = "Tuổi trẻ";
+            treeNode10.Name = "Node4";
+            treeNode10.Text = "Văn hóa";
+            treeNode11.Name = "Node5";
+            treeNode11.Text = "Thể thao";
+            treeNode12.Name = "Node0";
+            treeNode12.Text = "VnExpress";
+            treeNode13.Name = "Node6";
+            treeNode13.Text = "Quốc tế";
+            treeNode14.Name = "Node7";
+            treeNode14.Text = "Âm nhạc";
+            treeNode15.Name = "Node8";
+            treeNode15.Text = "Giải trí";
+            treeNode16.Name = "Node1";
+            treeNode16.Text = "Dân Trí";
+            treeNode17.Name = "Node2";
+            treeNode17.Text = "Vietnamnet";
+            treeNode18.Name = "Node3";
+            treeNode18.Text = "Tuổi trẻ";
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode30,
-            treeNode34,
-            treeNode35,
-            treeNode36});
+            treeNode12,
+            treeNode16,
+            treeNode17,
+            treeNode18});
             this.treeView.Size = new System.Drawing.Size(147, 482);
             this.treeView.TabIndex = 0;
             this.treeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView_AfterSelect);
@@ -377,11 +378,22 @@
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(595, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Đọc";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 506);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.SpeechLb);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.statusStrip);
@@ -440,5 +452,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label SpeechLb;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }

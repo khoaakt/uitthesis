@@ -625,5 +625,34 @@ namespace KLTN.View
                 }
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.CreateNoWindow = true;
+            startInfo.UseShellExecute = false;
+            startInfo.FileName = "espeak.exe";
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+            // lưu dữ liệu cần đọc ra tập tin txt tạm
+            System.IO.File.WriteAllText(@"temp.txt", webBrowser.DocumentText);
+
+
+            startInfo.Arguments = "-v vi -m -f temp.txt";
+
+            try
+            {
+                // Start the process with the info we specified.
+                // Call WaitForExit and then the using statement will close.
+                using (Process exeProcess = Process.Start(startInfo))
+                {
+                    //exeProcess.WaitForExit();
+                }
+            }
+            catch
+            {
+                // Log error.
+            }
+        }
     }
 }
